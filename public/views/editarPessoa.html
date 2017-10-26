@@ -1,0 +1,17 @@
+<div class="container" ng-controller="editarPessoaCtrl">
+    <h2>Editar Pessoa</h2>
+    <br/>
+    <form name="pessoaForm">
+        <div class="form-group">						
+            <input class="form-control" type="number" ng-model="pessoa.codigo" placeholder="Código" required value="{{pessoa.codigo}}" disabled/>
+        </div>
+        <div class="form-group">					
+            <input class="form-control" type="text" ng-model="pessoa.nome" ng-required="true" ng-minlength="4" ng-maxlength="120" placeholder="Nome" required/>
+        </div>
+        <div class="form-group">					
+            <input class="form-control" type="number" ng-model="pessoa.idade" ng-min="0" placeholder="Idade"/>
+        </div>
+        <button class="btn btn-success go" ng-click="editPessoa(pessoa)" ng-disabled="pessoaForm.$invalid">Salvar</button>
+    </form>
+    <a href="#!/home" class="btn btn-danger go">Cancelar</a>
+</div>

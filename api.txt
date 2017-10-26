@@ -1,0 +1,18 @@
+﻿ação: consultar todas pessoas
+uri: api/pessoas
+verbo: get
+retorno: array json de objetos Pessoa 
+[200] ok || [404] not found
+
+ação: inserir pessoa
+uri: api/pessoas
+varbo: post
+envio: objeto pessoa em JSON no corpo da requisição
+retorno: [201] created && objeto pessoa criado; //modificar para retornar uri do objeto criado
+se nao for pessoa [400] bad request nao é uma pessoa
+
+ação: deletar pessoa
+uri: api/pessoas/:codigo
+verbo: delete
+[204] no content null
+[400] bad request

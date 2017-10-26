@@ -1,0 +1,38 @@
+<div class="container"  ng-controller="postPessoasCtrl">
+    <br/>
+    <h2>Inserir Pessoa</h2>
+    <br/>
+    <form name="pessoaForm">
+        <div class="form-group">						
+            <input class="form-control" type="number" ng-model="pessoa.codigo" ng-required="true" ng-min="1" name="codigo" placeholder="Código (Obrigatório)" autofocus required/>
+        </div>
+        <div class="form-group">					
+            <input class="form-control" type="text" ng-model="pessoa.nome" ng-required="true" ng-minlength="4" ng-maxlength="120" name="nome" placeholder="Nome (Obrigatório)" required/>
+        </div>
+        <div class="form-group">					
+            <input class="form-control" type="number" ng-model="pessoa.idade" ng-min="0" name="idade" placeholder="Idade"/>
+        </div>
+        <button class="btn btn-success go" ng-click="addPessoa(pessoa)" ng-disabled="pessoaForm.$invalid">Salvar</button>
+    </form>
+    <a href="#!/home" class="btn btn-danger go">Cancelar</a>
+    <br/>
+    <div ng-show="pessoaForm.codigo.$dirty" ng-messages="pessoaForm.codigo.$error">
+        <div ng-message="required" class="alert alert-danger inside">
+            Código é obrigatório
+        </div>
+        <div ng-message="min" class="alert alert-danger inside">
+                Código deve ser maior que 0
+        </div>
+    </div>
+    <div ng-show="pessoaForm.nome.$dirty" ng-messages="pessoaForm.nome.$error">
+        <div ng-message="required" class="alert alert-danger inside">
+            Nome é obrigatório
+        </div>
+        <div ng-message="minlength" class="alert alert-danger inside">
+            Nome deve ter ao menos 4 caracteres
+        </div>
+        <div ng-message="maxlength" class="alert alert-danger inside">
+            Nome não pode exceder 120 caracteres
+        </div>
+    </div>
+</div>

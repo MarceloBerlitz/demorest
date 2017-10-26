@@ -1,0 +1,47 @@
+.acao {
+    padding: 4px;
+    width: 60px;
+}
+
+.th-order:hover {
+    text-decoration: none;
+    color:#7D7D7D;
+}
+
+.th-order {
+    text-decoration: none;
+    color:black;
+}
+
+.botao {
+    width: 80px;
+}
+
+.go {
+    float: right;
+    min-width: 100px;
+    margin-right: 6px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin-top: 30px;
+}
+
+.container {
+
+    margin-top: 40px;
+    padding-top: 0px;
+    
+}
+
+section {
+    margin-top: 70px;
+}
+
+.alert {
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}

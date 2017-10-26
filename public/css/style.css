@@ -1,0 +1,70 @@
+.container {
+    max-width: 800px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+    
+}
+
+.ct-tabela {
+    padding: 0px;
+}
+
+.table {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.go {
+    float: right;
+    min-width: 100px;
+    margin-right: 6px;
+    margin-bottom: 30px;
+}
+
+.acao {
+    padding: 4px;
+}
+
+.botao {
+    width: 160px;
+}
+
+section {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+h3 {
+    margin-top: 30px;
+}
+
+.alert {
+    margin-left: 50px;  
+    margin-right: 50px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+.th-order:hover {
+    text-decoration: none;
+    color:#7D7D7D;
+}
+
+.th-order {
+    text-decoration: none;
+    color:black;
+}
+
+.inside {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.buscador {
+    margin-top: 20px;
+}

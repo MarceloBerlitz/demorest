@@ -1,0 +1,26 @@
+<div class="container ct-tabela"  ng-controller="getPessoasCtrl">
+    <h3 ng-hide="Pessoas.length>0">Comece inserindo uma pessoa...</h3>
+    <div ng-show="Pessoas.length>0" class="form-group">					
+        <input ng-model="busca" class="form-control buscador" type="text" placeholder="Quem você está procurando?"/>
+    </div>
+    <table ng-show="Pessoas.length>0" class="table table-striped">
+        <thead>
+            <tr>
+                <th><a href="" class="th-order" ng-click="ordenarPor('codigo')">Código</a></th>
+                <th><a href="" class="th-order" ng-click="ordenarPor('nome')">Nome</a></th>
+                <th><a href="" class="th-order" ng-click="ordenarPor('idade')">Idade</a></th>
+                <th class="botao">Ação</th>
+            <tr>
+        </thead>	
+        <tr ng-repeat="pessoa in Pessoas | filter:{nome: busca} | orderBy:criterioOrdem:direcao">
+            <td>{{pessoa.codigo}}</td>
+            <td>{{pessoa.nome}}</td>
+            <td>{{pessoa.idade}}</td>
+            <td class="botao">
+                <button ng-click="verPessoa(pessoa)" class="btn btn-primary acao">Editar</button>
+                <button class="btn btn-danger acao" ng-click="deletePessoa(pessoa)">Excluir</button>
+            </td>
+        </tr>
+    </table>
+    <a href="#!/inserir" class="btn btn-success go">Inserir Pessoa</a>
+</div>
